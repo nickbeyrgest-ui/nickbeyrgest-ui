@@ -1,40 +1,65 @@
 <div align="center">
-  <img src="assets/banner.webp" alt="Marvollo Studio — moonlit pixel-art fantasy landscape" width="100%" />
+  <img src="assets/brand/studio-banner.png" alt="Marvollo Studio — moonlit ruined coast with the Marvollo Studio wordmark" width="100%" />
+  <br /><br />
+  <img src="assets/brand/logo-128.png" alt="Marvollo Studio logo" width="72" />
   <h1>MARVOLLO STUDIO</h1>
-  <p><strong>Independent Game Development</strong></p>
-  <p><em>Crafting worlds. Telling stories.</em></p>
-  <a href="https://marvollostudio.com"><img src="assets/website.svg" alt="Official website" width="145" /></a>
-  <a href="https://github.com/nickbeyrgest-ui/saltshore-devlog"><img src="assets/devlog.svg" alt="Development journal" width="145" /></a>
+  <p><strong>Independent game development</strong></p>
+  <p><em>Atmospheric worlds. Meaningful choices.</em></p>
+
+  <p>
+    <a href="https://marvollostudio.com"><img src="https://img.shields.io/badge/Website-marvollostudio.com-A97155?style=for-the-badge&labelColor=151211" alt="Official website" /></a>
+    <a href="https://marvollostudio.itch.io/"><img src="https://img.shields.io/badge/itch.io-Marvollo%20Studio-C4A477?style=for-the-badge&labelColor=151211" alt="Marvollo Studio on itch.io" /></a>
+  </p>
 </div>
 
-<p align="center"><br /><img src="assets/divider.svg" alt="" width="100%" /></p>
+<p align="center"><img src="assets/brand/divider.png" alt="" width="100%" /></p>
 
-## Our Worlds
+## The studio
 
-<img src="assets/saltshore-concept.webp" alt="Saltshore concept artwork — a moonlit shipwreck" width="100%" />
+Marvollo Studio is an independent game development project focused on atmospheric, story-driven RPGs. We build dark fantasy worlds where exploration, survival and the consequences of your choices matter.
+
+The studio identity is deliberately quiet: charcoal-brown surfaces, warm copper and antique gold, cinematic art, clear typography and as little interface noise as possible.
+
+## Current project
+
+<p align="center">
+  <a href="https://marvollostudio.itch.io/saltshore"><img src="assets/brand/saltshore-cover.png" alt="Saltshore — Mira on a storm-wrecked shore" width="630" /></a>
+</p>
 
 ### Saltshore
 
-**Dark Fantasy RPG · In active development**
+**Dark fantasy RPG · In development**
 
-A narrative-driven world of exploration, survival and meaningful choices.
+After surviving a shipwreck, Mira finds herself stranded on an unfamiliar shore. With limited resources and no clear path ahead, she must survive, explore the world around her and uncover what lies beyond the coastline.
 
-<p><a href="https://marvollostudio.com"><img src="assets/official-website.svg" alt="Official website" width="170" /></a> <a href="https://github.com/nickbeyrgest-ui/saltshore-devlog"><img src="assets/development-journal.svg" alt="Development journal" width="210" /></a></p>
+- **Planned first public release:** December 31, 2026
+- **Estimated playtime:** 1–2 hours
+- **Price:** Free
 
-<sub>Concept artwork, not an in-game screenshot.</sub>
+<p>
+  <a href="https://marvollostudio.itch.io/saltshore"><img src="https://img.shields.io/badge/View%20on-itch.io-A97155?style=for-the-badge&labelColor=151211" alt="Saltshore on itch.io" /></a>
+  <a href="https://marvollostudio.com"><img src="https://img.shields.io/badge/Official-website-C4A477?style=for-the-badge&labelColor=151211" alt="Official website" /></a>
+</p>
 
-<p align="center"><img src="assets/divider.svg" alt="" width="100%" /></p>
+<p align="center"><img src="assets/brand/divider.png" alt="" width="100%" /></p>
 
-## Development Focus
+## Development focus
 
 - Narrative design and worldbuilding
-- RPG mechanics and interactive systems
-- Game art and user experience
+- RPG systems, progression and choice
+- Survival, crafting and exploration
+- Cinematic art direction and interface design
 - Development tools and automation
 
-## Development Toolkit
+## Toolkit
 
-`RPG Maker MZ` · `JavaScript` · `Python` · `Pixel Art` · `Git` · `Linux`
+![RPG Maker MZ](https://img.shields.io/badge/RPG%20Maker%20MZ-A97155?style=flat-square&labelColor=151211)
+![JavaScript](https://img.shields.io/badge/JavaScript-DDD3C5?style=flat-square&labelColor=151211)
+![Python](https://img.shields.io/badge/Python-DDD3C5?style=flat-square&labelColor=151211)
+![Git](https://img.shields.io/badge/Git-DDD3C5?style=flat-square&labelColor=151211)
 
-<p align="center"><img src="assets/divider.svg" alt="" width="100%" /></p>
-<p align="center"><sub>MARVOLLO STUDIO · EST. 2026</sub></p>
+<p align="center"><img src="assets/brand/divider.png" alt="" width="100%" /></p>
+
+<p align="center">
+  <sub>MARVOLLO STUDIO · INDEPENDENT GAME DEVELOPMENT · <a href="https://marvollostudio.com">marvollostudio.com</a></sub>
+</p>
