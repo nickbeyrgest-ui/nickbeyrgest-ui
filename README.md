@@ -1,29 +1,65 @@
 <div align="center">
-  <img src="assets/banner.webp" alt="Marvollo Studio — moonlit pixel-art fantasy landscape" width="100%" />
-  <h1>MARVOLLO STUDIO</h1>
-  <p><strong>Independent Game Development</strong></p>
-  <p><em>Crafting worlds. Telling stories.</em></p>
-  <a href="https://marvollostudio.com"><img src="assets/website.svg" alt="Official website" width="145" /></a>
-  <a href="https://github.com/nickbeyrgest-ui/saltshore-devlog"><img src="assets/devlog.svg" alt="Development journal" width="145" /></a>
+  <picture>
+    <source media="(max-width: 600px)" srcset="assets/branding/studio-hero-mobile.png">
+    <img src="assets/branding/studio-hero.png" alt="Marvollo Studio — independent game development" width="100%">
+  </picture>
 </div>
 
-<p align="center"><br /><img src="assets/divider.svg" alt="" width="100%" /></p>
+<p align="center">
+  <strong>Independent Game Development</strong><br>
+  <em>Atmospheric worlds. Meaningful choices.</em>
+</p>
 
-## Our Worlds
+<p align="center">
+  Marvollo Studio is an independent game development project focused on atmospheric, story-driven RPGs.<br>
+  We create worlds where exploration, character development and meaningful choices shape the player's journey.
+</p>
 
-<img src="assets/saltshore-concept.webp" alt="Saltshore concept artwork — a moonlit shipwreck" width="100%" />
+<p align="center">
+  <a href="https://marvollostudio.com"><img src="assets/buttons/website.png" height="48" alt="Official website"></a>
+  <a href="https://marvollostudio.itch.io/"><img src="assets/buttons/itch.png" height="48" alt="Marvollo Studio on itch.io"></a>
+  <a href="https://github.com/nickbeyrgest-ui/saltshore-devlog"><img src="assets/buttons/devlog.png" height="48" alt="Development journal"></a>
+</p>
 
-### Saltshore
+<p align="center"><img src="assets/branding/divider.svg" alt="" width="100%"></p>
 
-**Dark Fantasy RPG · In active development**
+<h2 align="center">Our Worlds</h2>
 
-A narrative-driven world of exploration, survival and meaningful choices.
+<p align="center"><em>One studio. Many worlds.</em></p>
 
-<p><a href="https://marvollostudio.com"><img src="assets/official-website.svg" alt="Official website" width="170" /></a> <a href="https://github.com/nickbeyrgest-ui/saltshore-devlog"><img src="assets/development-journal.svg" alt="Development journal" width="210" /></a></p>
+<p align="center">
+  <a href="https://marvollostudio.itch.io/saltshore">
+    <img src="assets/saltshore/hero.png" alt="Saltshore — a dark fantasy RPG by Marvollo Studio" width="100%">
+  </a>
+</p>
 
-<sub>Concept artwork, not an in-game screenshot.</sub>
+### Saltshore / Соль на ладонях
 
-<p align="center"><img src="assets/divider.svg" alt="" width="100%" /></p>
+A story-driven dark fantasy RPG about survival, discovery and the consequences of your choices.
+
+After surviving a shipwreck, Mira finds herself stranded on an unfamiliar shore. Her journey is shaped by exploration, character development and the decisions she makes.
+
+**Genre:** Dark Fantasy RPG · **Status:** In development  
+**Planned first release:** December 31, 2026 · **Estimated playtime:** 1–2 hours  
+**Distribution:** Free · **Audience:** 18+
+
+<sub>Release date and playtime refer to the first public version.</sub>
+
+<p>
+  <a href="https://marvollostudio.itch.io/saltshore"><img src="assets/buttons/discover-saltshore.png" height="48" alt="Discover Saltshore"></a>
+  <a href="https://github.com/nickbeyrgest-ui/saltshore-devlog"><img src="assets/buttons/devlog.png" height="48" alt="Development journal"></a>
+</p>
+
+#### From the current build
+
+<sub>Actual in-game frames from the Russian-language development build. English localization is not confirmed.</sub>
+
+<p align="center">
+  <img src="assets/saltshore/screenshot-01.png" alt="Saltshore gameplay — the forest edge" width="49%">
+  <img src="assets/saltshore/screenshot-02.png" alt="Saltshore — the pause menu and Mira" width="49%">
+</p>
+
+<p align="center"><img src="assets/branding/divider.svg" alt="" width="100%"></p>
 
 ## Development Focus
 
@@ -34,7 +70,8 @@ A narrative-driven world of exploration, survival and meaningful choices.
 
 ## Development Toolkit
 
-`RPG Maker MZ` · `JavaScript` · `Python` · `Pixel Art` · `Git` · `Linux`
+<p align="center"><code>RPG Maker MZ</code> · <code>JavaScript</code> · <code>ComfyUI</code> · <code>Pixelorama</code> · <code>OpenCode</code> · <code>Git &amp; GitHub</code></p>
 
-<p align="center"><img src="assets/divider.svg" alt="" width="100%" /></p>
+<p align="center"><img src="assets/branding/divider.svg" alt="" width="100%"></p>
+
 <p align="center"><sub>MARVOLLO STUDIO · EST. 2026</sub></p>
