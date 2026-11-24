@@ -8,7 +8,7 @@
   <a href="https://github.com/nickbeyrgest-ui?tab=repositories"><img src="assets/repositories.svg" alt="Repositories" width="145" /></a>
 </div>
 
-<p align="center"><img src="assets/divider.svg" alt="" width="100%" /></p>
+<p align="center"><br /><img src="assets/divider.svg" alt="" width="100%" /></p>
 
 ## Our Worlds
 
