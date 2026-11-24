@@ -56,7 +56,7 @@ After surviving a shipwreck, Mira finds herself stranded on an unfamiliar shore.
 
 <p align="center">
   <img src="assets/saltshore/screenshot-01.png" alt="Saltshore gameplay — the forest edge" width="49%">
-  <img src="assets/saltshore/screenshot-02.png" alt="Saltshore — the pause menu and Mira" width="49%">
+  <img src="assets/saltshore/screenshot-02.png" alt="Saltshore — the title screen" width="49%">
 </p>
 
 <p align="center"><img src="assets/branding/divider.svg" alt="" width="100%"></p>
