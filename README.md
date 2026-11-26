@@ -1,8 +1,5 @@
 <div align="center">
-  <picture>
-    <source media="(max-width: 600px)" srcset="assets/branding/studio-hero-mobile.png">
-    <img src="assets/branding/studio-hero.png" alt="Marvollo Studio — independent game development" width="100%">
-  </picture>
+  <img src="assets/branding/title-animated.svg" alt="Marvollo Studio — independent game development" width="100%">
 </div>
 
 <p align="center">
@@ -29,7 +26,10 @@
 
 <p align="center">
   <a href="https://marvollostudio.itch.io/saltshore">
-    <img src="assets/saltshore/hero.png" alt="Saltshore — a dark fantasy RPG by Marvollo Studio" width="100%">
+    <picture>
+      <source media="(prefers-reduced-motion: reduce)" srcset="assets/saltshore/hero-fog-poster.png">
+      <img src="assets/saltshore/hero-fog.gif" alt="Saltshore — a dark fantasy RPG by Marvollo Studio" width="100%">
+    </picture>
   </a>
 </p>
 
