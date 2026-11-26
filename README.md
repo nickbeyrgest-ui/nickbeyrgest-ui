@@ -1,5 +1,8 @@
 <div align="center">
-  <img src="assets/branding/title-animated.svg" alt="Marvollo Studio — independent game development" width="100%">
+  <picture>
+    <source media="(max-width: 600px)" srcset="assets/branding/studio-hero-mobile.png">
+    <img src="assets/branding/studio-hero.png" alt="Marvollo Studio — independent game development" width="100%">
+  </picture>
 </div>
 
 <p align="center">
@@ -67,14 +70,6 @@ After surviving a shipwreck, Mira finds herself stranded on an unfamiliar shore.
 - RPG mechanics and interactive systems
 - Game art and user experience
 - Development tools and automation
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/nickbeyrgest-ui/nickbeyrgest-ui/snake-output/snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/nickbeyrgest-ui/nickbeyrgest-ui/snake-output/snake-light.svg">
-    <img src="https://raw.githubusercontent.com/nickbeyrgest-ui/nickbeyrgest-ui/snake-output/snake-light.svg" alt="Animated snake crossing the contribution graph" width="100%">
-  </picture>
-</p>
 
 <p align="center"><img src="assets/branding/divider.svg" alt="" width="100%"></p>
 
