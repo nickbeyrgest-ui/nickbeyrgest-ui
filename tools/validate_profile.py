@@ -250,7 +250,20 @@ def validate_docs() -> None:
             and "hero-fog-poster.png" in readme,
             "README.md serves a reduced-motion Saltshore poster",
         )
-        check("snake-output" not in readme, "README.md does not reference the snake output branch yet")
+        check(
+            "raw.githubusercontent.com/nickbeyrgest-ui/nickbeyrgest-ui/snake-output/snake-light.svg" in readme
+            and "raw.githubusercontent.com/nickbeyrgest-ui/nickbeyrgest-ui/snake-output/snake-dark.svg" in readme,
+            "README.md references published light and dark snake output",
+        )
+        check(
+            'media="(prefers-color-scheme: dark)"' in readme
+            and 'media="(prefers-color-scheme: light)"' in readme,
+            "README.md selects the snake per colour scheme",
+        )
+        check(
+            'alt="Animated snake crossing the contribution graph"' in readme,
+            "README.md snake has descriptive alt text",
+        )
         check("divider.svg" in readme, "README.md still uses the approved divider")
         for reference in re.findall(r'(?:src|srcset)="([^"]+)"', readme):
             for candidate in reference.split(","):
