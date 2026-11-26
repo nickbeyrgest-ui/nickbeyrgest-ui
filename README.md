@@ -68,6 +68,14 @@ After surviving a shipwreck, Mira finds herself stranded on an unfamiliar shore.
 - Game art and user experience
 - Development tools and automation
 
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/nickbeyrgest-ui/nickbeyrgest-ui/snake-output/snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/nickbeyrgest-ui/nickbeyrgest-ui/snake-output/snake-light.svg">
+    <img src="https://raw.githubusercontent.com/nickbeyrgest-ui/nickbeyrgest-ui/snake-output/snake-light.svg" alt="Animated snake crossing the contribution graph" width="100%">
+  </picture>
+</p>
+
 <p align="center"><img src="assets/branding/divider.svg" alt="" width="100%"></p>
 
 <p align="center"><sub>MARVOLLO STUDIO · EST. 2026</sub></p>

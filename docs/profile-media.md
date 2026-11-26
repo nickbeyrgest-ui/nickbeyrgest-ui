@@ -1,14 +1,23 @@
 # Profile media integration
 
-Status: **title and Saltshore hero integrated**. `README.md` now uses
-`assets/branding/title-animated.svg` as the single profile title and serves the
-cinematic Saltshore loop with a reduced-motion poster. The existing buttons,
-screenshots, copy and divider are preserved. The contribution-snake workflow is
-committed but has not been run, and the `snake-output` branch does not exist yet.
+Status: **title, Saltshore hero and contribution snake integrated and
+published**. `README.md` uses `assets/branding/title-animated.svg` as the single
+profile title, serves the cinematic Saltshore loop with a reduced-motion poster,
+and references the published light/dark snake SVGs. The existing buttons,
+screenshots, copy and divider are preserved.
 
-Owner approval for the animations was granted. The snake output is published
-only after a non-publishing dry run, and the README snake snippet is applied only
-after `snake-output` exists, so the profile never links to a missing image.
+Publishing record:
+
+| Step | Reference |
+|---|---|
+| Integration PR | #5, merged as `5ce53a7` with a history-preserving merge commit |
+| Dry run | run `45819665287`, success, artifacts inspected, no branch created |
+| Publish run | run `45819921938`, success |
+| Output commit | `2722269` on `snake-output`, one normal commit, no force |
+| Raw checks | `snake-light.svg` and `snake-dark.svg` returned HTTP 200 |
+
+The snake output was published before the README referenced it, so the profile
+never linked to a missing image.
 
 ## 1. Animated studio title
 
@@ -93,6 +102,8 @@ manual dispatch is available only after the workflow exists there.
 
 ### Snippet
 
+Applied to `README.md` only after both raw URLs returned HTTP 200:
+
 ```html
 <p align="center">
   <picture>
@@ -107,10 +118,10 @@ Place it after the **Development Focus** list or immediately before the footer
 divider. It is a single activity graphic, not a statistics card, badge row or
 repository index.
 
-### Approval runbook
+### Publishing runbook
 
-1. Owner reviews the branch diff and the SVG preview.
-2. Merge the branch to `main` (this is the publishing approval).
+1. Owner reviews the branch diff and the SVG preview (done for PR #5).
+2. Merge the branch to `main` with a merge commit (done).
 3. Run a non-publishing check:
    `gh workflow run contribution-snake.yml --ref main -f dry_run=true`
 4. Download the `contribution-snake` artifact and inspect both SVGs in a light
@@ -121,9 +132,9 @@ repository index.
    `snake-dark.svg`.
 7. Apply the README snippet and verify desktop, 390 px mobile, light and dark.
 
-If the owner wants to hold publication after merge, remove the `schedule` block
-before merging. With the schedule present, the first automatic run happens on the
-next 04:17 UTC after merge.
+The `schedule` trigger is active, so the snake refreshes daily at 04:17 UTC.
+Manual runs default to `dry_run=true`; publishing requires the explicit boolean
+input `false`.
 
 ## 4. Accessibility and validation
 
@@ -136,6 +147,10 @@ next 04:17 UTC after merge.
 - The title and Saltshore hero animations are decorative; no information exists
   only in motion. Reduced-motion users receive the complete static title plate
   and the static Saltshore poster.
+- The generated snake SVG animates continuously on a 14.5 s loop. snk v3.5.0
+  does not expose a reduced-motion variant, so that graphic cannot honor the
+  preference. It is decorative, does not flash, and its meaning is carried by
+  the README alt text; the title and hero do honor `prefers-reduced-motion`.
 - Animation cycles are slower than 1 Hz and do not flash.
 - Contrast on `#151211`: wordmark `#D5B58A` 9.59:1, subtitle `#C4A477` 7.92:1,
   body `#DDD3C5` 12.60:1, 78% tagline 8.02:1, copper ornament 4.60:1.
