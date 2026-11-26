@@ -196,7 +196,7 @@ def validate_workflow() -> None:
     check("runs-on: ubuntu-latest" in raw, "workflow uses a GitHub-hosted Ubuntu runner")
     check("target_branch: snake-output" in raw, "workflow publishes to the isolated snake-output branch")
     check(not re.search(r"target_branch:\s*(main|master|gh-pages)\b", raw), "workflow never targets a primary branch")
-    check("keep_history: false" in raw, "output branch is rebuilt, not appended")
+    check("keep_history: true" in raw, "output branch appends normal commits without force")
     check("allow_empty_commit: false" in raw, "workflow avoids empty commits")
     check("dry_run: ${{ inputs.dry_run == true }}" in raw, "manual runs default to a non-publishing dry run")
     check("default: true" in raw, "manual dispatch defaults to dry_run=true")
@@ -224,6 +224,8 @@ def validate_docs() -> None:
     check("prefers-color-scheme: dark" in raw and "prefers-color-scheme: light" in raw, "guide selects a snake per colour scheme")
     check("title-animated.svg" in raw, "guide references the animated title")
     check("assets/branding/studio-hero.png" in raw, "guide preserves the existing approved hero")
+    check("hero-fog.gif" in raw and "hero-fog-poster.png" in raw, "guide documents the cinematic hero and poster")
+    check("prefers-reduced-motion: reduce" in raw, "guide documents the reduced-motion hero fallback")
     check("snake-output" in raw, "guide uses the isolated output branch")
     check("dry_run" in raw, "guide documents the non-publishing run")
     check("GITHUB_TOKEN" in raw, "guide documents the built-in token")
@@ -237,14 +239,31 @@ def validate_docs() -> None:
     check(README.is_file(), "README.md exists")
     if README.is_file():
         readme = README.read_text(encoding="utf-8")
-        check("title-animated.svg" not in readme, "README.md is not integrated yet")
+        check("title-animated.svg" in readme, "README.md uses the animated title")
+        check(
+            'alt="Marvollo Studio — independent game development"' in readme,
+            "README.md title has descriptive alt text",
+        )
+        check("hero-fog.gif" in readme, "README.md uses the cinematic Saltshore loop")
+        check(
+            'media="(prefers-reduced-motion: reduce)"' in readme
+            and "hero-fog-poster.png" in readme,
+            "README.md serves a reduced-motion Saltshore poster",
+        )
         check("snake-output" not in readme, "README.md does not reference the snake output branch yet")
-        check("assets/branding/studio-hero.png" in readme, "README.md still uses the approved hero")
         check("divider.svg" in readme, "README.md still uses the approved divider")
+        for reference in re.findall(r'(?:src|srcset)="([^"]+)"', readme):
+            for candidate in reference.split(","):
+                path = candidate.strip().split(" ")[0]
+                if path.startswith(("http://", "https://", "//")):
+                    continue
+                check((ROOT / path).is_file(), f"README.md asset exists: {path}")
 
 
 def validate_preserved_assets() -> None:
     for relative in (
+        "assets/saltshore/hero-fog.gif",
+        "assets/saltshore/hero-fog-poster.png",
         "assets/branding/studio-hero.png",
         "assets/branding/studio-hero-mobile.png",
         "assets/branding/divider.svg",
@@ -256,7 +275,13 @@ def validate_preserved_assets() -> None:
         "assets/saltshore/screenshot-01.png",
         "assets/saltshore/screenshot-02.png",
     ):
-        check((ROOT / relative).is_file(), f"existing asset preserved: {relative}")
+        check((ROOT / relative).is_file(), f"asset present: {relative}")
+
+    hero_gif = ROOT / "assets" / "saltshore" / "hero-fog.gif"
+    if hero_gif.is_file():
+        header = hero_gif.read_bytes()[:6]
+        check(header in {b"GIF87a", b"GIF89a"}, "Saltshore loop is a GIF", repr(header))
+        check(hero_gif.stat().st_size < 5_000_000, "Saltshore loop is under 5 MB", f"{hero_gif.stat().st_size} bytes")
 
 
 def main() -> int:

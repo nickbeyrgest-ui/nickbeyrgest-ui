@@ -48,7 +48,8 @@ jobs:
         with:
           target_branch: snake-output
           build_dir: dist
-          keep_history: false
+          # Append a normal commit instead of force-pushing the output branch.
+          keep_history: true
           allow_empty_commit: false
           commit_message: "chore: refresh contribution snake"
           dry_run: ${{ inputs.dry_run == true }}
